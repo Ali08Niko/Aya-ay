@@ -375,11 +375,12 @@ button:hover {
 
 .flag-decoration {
     position: absolute;
-    width: 75px;
+    width: 100px;
     height: auto;
     top: -0.05px;
     left: 90%;
     transform: translateX(-50%) rotate(8deg);
+    transition: transform 0.3s ease;
     z-index: 5;
 }
 
@@ -387,13 +388,10 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-.flag-decoration:hover {
-    transform: rotate(18deg) scale(1.1);
-}
 
 .letter-a {
     position: absolute;
-    width: 60px;
+    width: 90px;
     height: auto;
     top: 15%;
     left: -35px;
@@ -407,7 +405,7 @@ button:hover {
 
 .letter-l {
     position: absolute;
-    width: 60px;
+    width: 90px;
     height: auto;
     top: 40%;
     right: -35px;
@@ -421,7 +419,7 @@ button:hover {
 
 .letter-i {
     position: absolute;
-    width: 60px;
+    width: 90px;
     height: auto;
     bottom: 12%;
     left: -30px;
@@ -503,7 +501,7 @@ button:hover {
 
     .flag-decoration {
         width: 75px;
-        top: -30px;
+        top: -0.5px;
         right: -15px;
     }
 

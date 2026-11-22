@@ -56,6 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
         "I have to bail Lord Tubbington out of jail. He tried to sell my iPhone for drugs -Brittany S. Pierce",
         "That's a great haircut, Mercedes, I thought you graduated. -Brittany S. Pierce",
         "It's hard to make out over Skype. You can't really scissor a webcam. -Brittany S. Pierce",
+        "Come on this is a safe space, we're on the internet. -Brittany S. Pierce",
+        "I have an announcement. I have recently discovered that the Tubbington-Bopp is not an asteroid. It is a dead ladybug at the end of my telescope. And I have also discovered that my telescope is not a telescope. It is a Pringles can. Hallelujah, we're saved. -Brittany S. Pierce",
+        "Well get over it because sadness is stupid. -Brittany S. Pierce",
+        "I'm Brittany S. Pierce, and Fondue for Two has been on hiatus because, as it turns out, I'm a genius. -Brittany S. Pierce",
         
     ];
 
@@ -89,8 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // Music button
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const music = document.getElementById("backgroundMusic");
@@ -155,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // favorites album
-
 const galleryImages = document.querySelectorAll(".gallery-photo img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
