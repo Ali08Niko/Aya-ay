@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aaliyah Aya-ay">
+    <meta name="description" content="Personal website about me, my favorite things and many more soon!">
+    <title>Aaliyah Aya-ay | BSIS Freshman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body id="top">
+<!-- ======= Header / Navigation ======= -->
+    <header class="top-header">
+        <a class="header" href="#home"><span>Ali's</span> Little Corner✦</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="music-btn" id="musicButton" type="Button">♫ Play a tune</button>
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="./audio/background-music.mp3" type="audio/mpeg">
+        </audio>
+    </header>
+
+    <main>
+        <!-- ========== HERO ========== -->
+         
+        <section class="hero" id="home">
+            <div>
+                <div class="eyebrow">✦ A LITTLE MAGIC, A LITTLE MYSTERY ✦ </div>
+                <p class="hero-greeting">
+                    WELCOME, LITTLE WANDERER...
+                </p>
+                <h1>A WORLD<br> OF <em>PURE IMAGINATION</em></h1>
+                <p class="hero-copy">
+                    Step into my little corner of the internet —
+                    a cozy Space All About Me, interests,
+                    dreams, and My Journey Through Life.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="primary" href="#about">
+                        GET TO KNOW ME ↗
+                    </a>
+
+                    <button class="secondary" id="surpriseButton" type="button">
+                        MY FAVE QUOTES ✦
+                    </button>
+                </div>
+
+                <div class="surprise-bubble" id="surpriseBubble">
+                    <span class="bubble-icon">✦</span>
+                    <p id="surpriseText">A little message for you!</p>
+                </div>
+
+                <div class="hero-footer-note">
+                    <span>☽</span>
+                    EST. 2026 · WRITTEN IN THE STARS
+                    <span>☾</span>
+                </div>
+            </div>
+
+            <figure class="hero-image">
+
+                <img class="flag-decoration" src= "./images/flag-deco.jpg" alt="flag">
+                <img class="letter-decoration letter-a" src= "./images/letter-deco-a.png" alt="LetterA">
+                <img class="letter-decoration letter-l" src= "./images/letter-deco-l.png" alt="LetterL">
+                <img class="letter-decoration letter-i" src= "./images/letter-deco-i.png" alt="LetterI">
+
+                <div class="portrait-frame">
+
+                <img class="hero-photo" src="./images/download.jpg" alt="My profile picture">
+                <img class="hero-sticker" src="./images/snoopy_dance.gif" alt="Dancing Snoopy">
+
+                    <figcaption class="portrait-caption">
+                        ✧ a little glimpse of me ✧
+                    </figcaption>
+            </figure>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+         <section class="section" id="about">
+
+            <div class="section-heading">
+                <p class="about-kicker">☽ THE STORY BEHIND THE MAGIC ☾</p>
+                <h2>A Little About Me</h2>
+                <span class="section-note">
+                    [ MY STORY — MY INTERESTS — MY LITTLE WORLD ]
+                </span>
+            </div>
+
+            <div class="about-grid">
+
+                <article class="panel">
+                    <span class="panel-symbol">✧</span>
+                    <span class="panel-label">CHAPTER I · THE GIRL</span>
+
+                    <h3>Greetings, I'm Aaliyah Aya-ay♥</h3>
+                    <p>A BSIS Freshman student from CIIT. I am a dreamer, and someone who enjoys discovering new things. This website is a Finals Project for a Web Design subject.</p>
+                    <p>This little corner is a collection of who I am, the things I love, and the journey I'm still figuring out along the way.</p>
+                </article>
+                <article class="panel">
+                    <span class="panel-symbol">☾</span>
+                    <span class="panel-label">CHAPTER II · THE LITTLE THINGS</span>
+                    <h3>Things That Make Me, Me</h3>
+                    <p>I love Snoopy, Anything purple, Daydreaming, Discovering new and fun things. I enjoy Movies, Musicals, Books, and Crafts.</p>
+                    <p>I believe creating doesn't have to be perfect. What matters is enjoying the process and being happy with what you make.</p>
+                    <div class="tag-row">
+                        <span class="tag">✦ Purple</span>
+                        <span class="tag">☽ Musicals</span>
+                        <span class="tag">✧ Crafts</span>
+                        <span class="tag">♡ Daydreaming</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- ========== FAV SECTION ========== -->
+            <div class="fav-album-entry">
+                <div class="album-decoration">✧ ☾ ✧</div>
+                <p class="album-kicker">A COLLECTION OF LITTLE TREASURES</p>
+                <h3>My Book of Curiosities</h3>
+                <p class="album-hint">
+                    A few things that hold a special place in my heart.
+                </p>
+
+                <button class="album-toggle" id="albumToggle" type="button"
+                    aria-expanded="false" aria-controls="favGallery">
+                    ♡ Open the Book
+                </button>
+                <p class="album-hint">A little collection of my favorite things.</p>
+            </div>
+
+            <div class="fav-gallery" id="favGallery" hidden>
+                <div class="gallery-heading">
+                    <span class="gallery-kicker">☽ A COLLECTION OF FAVORITES ☾</span>
+                    <h3>Little Things I Adore ♡</h3>
+                    <p>Every picture holds a little piece of my heart.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-photo">
+                        <img src="./images/fav_musical.jpg" alt="My Favorite Musical">
+                        <figcaption>Best Musical Ever ♡</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo">
+                        <img src="./images/fav_series.jpg" alt="Best Series">
+                        <figcaption>24/7 Rewatch</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo">
+                        <img src="./images/fav_anime.jpg" alt="Best Anime">
+                        <figcaption>FairyTails do exsits</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo">
+                        <img src="./images/best_dog.jpg" alt="Best Dog Ever">
+                        <figcaption>Best Dog Ever</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+            <div class="lightbox" id="lightbox" aria-hidden="true">
+                <button class="lightbox-close" id="lightboxClose"
+                    aria-label="Close image">&times;</button>
+
+                <img id="lightboxImage" src="" alt="">
+                <p id="lightboxCaption"></p>
+            </div>
+         </section>
+
+         <!-- ========== EDUCATION ========== -->
+         <section class="section" id="education">
+            <div class="section-heading">
+                <p class="section-kicker">✧ THE CHAPTERS OF MY JOURNEY ✧</p>
+                <h2>My Education</h2>
+                <p class="section-note">[ EVERY CHAPTER SHAPES WHO I AM ]</p>
+            </div>
+
+            <div class="education-intro">
+                <p>
+                    Every experience is a lesson, and every chapter brings me one step closer to the person I want to become. Here's a little look at my academic journey.
+                </p>
+            </div>
+            <div class="education-timeline">
+                <div class="timeline-symbol">☽</div>
+                <div class="education-card">
+                    <div class="education-chapter">
+                        <p class="education-chapter">CHAPTER I · THE BEGINNING</p> 
+                        <span class="education-year">[2014 - 2019]</span>
+                        <h3>Elementary School</h3>
+                        <p class="education-school"> Goose Elementary Grade School</p>
+                        <p class="education-description">A chapter filled with first experiences, new friendships, and the beginning of my learning journey.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="timeline-symbol">✦</div>
+                    <div class="education-card">
+                        <p class="education-chapter">CHAPTER II · GROWING</p>
+                        <span class="education-year">[2019 - 2024]</span>
+                        <h3>Junior High School</h3>
+                        <p class="education-school">Southridge Private High School</p>
+                        <p class="education-description">A time of discovering new interests, facing challenges, and learning more about myself.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="timeline-symbol">☾</div>
+                    <div class="education-card">
+                        <p class="education-chapter">CHAPTER III · NEW HORIZONS</p>
+                        <span class="education-year">[2024 - 2026]</span>
+                        <h3>Senior High School</h3>
+                        <p class="education-school">College of San Benildo Rizal</p>
+                        <p class="education-description">A chapter of growth, new responsibilities, and preparing myself for the next adventure.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="timeline-symbol">✧</div>
+                    <div class="education-card">
+                        <p class="education-chapter">CHAPTER IV · THE STORY CONTINUES</p>
+                        <span class="education-year">2026 - present</span>
+                        <h3>College</h3>
+                        <p class="education-school">CIIT College of Technology and Innovation</p>
+                        <p class="education-description">Currently pursuing Information Systems, learning new skills, and working toward my future goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PORTFOLIO ========-->
+
+        <section class="section portfolio-section" id="portfolio">
+            <div class="section-heading">
+                <p class="section-kicker">✧ THE ARCHIVES OF CREATION ✧</p>
+                <h2>My Little Portfolio</h2>
+                <p class="section-note">[ IDEAS — CREATIONS — FUTURE PROJECTS ]</p>
+            </div>
+
+            <div class="portfolio-intro">
+                <p>Every creation starts with an idea. This little corner is where I'll be collecting the things I make, the things I learn, and the projects I'm proud of.</p>
+            </div>
+
+            <div class="work-progress-card">
+
+                <div class="progress-decoration top-left">✦</div>
+                <div class="progress-decoration top-right">☾</div>
+                <div class="progress-decoration bottom-left">✧</div>
+                <div class="progress-decoration bottom-right">✦</div>
+
+                <div class="construction-illustration">
+                    <div class="construction-moon">☾</div>
+                    <div class="construction-sign">
+                        <span class="sign-star">✧</span>
+                        <span class="sign-title">UNDER</span>
+                        <span class="sign-title">CONSTRUCTION</span>
+                        <span class="sign-star">✧</span>
+                    </div>
+                    <div class="construction-sparkle sparkle-one">✦</div>
+                    <div class="construction-sparkle sparkle-two">✧</div>
+                    <div class="construction-sparkle sparkle-three">⋆</div>
+                </div>
+
+                <p class="progress-label">A SPELL IS BEING PREPARED...</p>
+
+                <h3>Something Magical Is Brewing!</h3>
+
+                <p class="progress-description">My portfolio is still a work in progress. I'm currently gathering ideas, learning new skills, and creating things worth sharing.<br><br>Check back soon for a little magic!</p>
+
+                <div class="progress-divider">
+                    <span>✧</span>
+                    <span>☽</span>
+                    <span>✧</span>
+                </div>
+
+                <p class="progress-footer">
+                    CURRENT STATUS: CREATING MY OWN MAGIC
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== CONTACT ========== -->
+        
+        <section class="section contact-section" id="contact">
+
+            <div class="section-heading">
+                <p class="section-kicker">✧ SEND A LITTLE MAGIC MY WAY ✧</p>
+                <h2>Let's Keep in Touch</h2>
+                <p class="section-note">[ EVERY CONNECTION STARTS SOMEWHERE ]</p>
+            </div>
+
+            <div class="contact-intro">
+                <p>Have something to share, a question to ask, or simply want to say hello? My little corner is always open for a friendly conversation!</p>
+            </div>
+
+            <div class="contact-card">
+            <div class="contact-card-decoration">☾</div>
+            <p class="contact-letter-label">A LITTLE LETTER FOR YOU</p>
+            <h3>You've Found My Little Corner!</h3>
+            <p class="contact-message">I'd love to hear from you! Whether it's about creativity, shared interests, or just a simple hello, feel free to reach out.</p>
+
+            <div class="contact-divider">
+                <span>✧</span>
+                <span>☽</span>
+                <span>✧</span>
+            </div>
+
+            <p class="contact-social-label">FIND ME AROUND THE INTERNET</p>
+            <div class="contact-links">
+                <a href="mailto:aaliyahnicole.0930@gmail.com"
+                class="contact-link">
+                <span class="contact-icon">✉</span>
+                <span>Email</span>
+            </a>
+
+            <a href="https://github.com/Ali08Niko"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+                <span class="contact-icon">✦</span>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://www.instagram.com/aliya.h008/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-link">
+                <span class="contact-icon">♡</span>
+                <span>Instagram</span>
+            </a>
+
+        </div>
+
+        <p class="contact-signature">
+            With a little magic,
+            <br>
+            <span>Ali ✧</span>
+        </p>
+
+    </div>
+
+    <p class="contact-bottom-note">
+        ✦ THANK YOU FOR VISITING MY LITTLE WORLD ✦
+    </p>
+
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <p class="footer-name">Ali's Little Corner ♡</p>
+            <p class="footer-description">
+                A little space filled with memories, dreams, and things I love.
+            </p>
+            </div>
+
+            <nav aria-label="Footer navigation">
+                <p class="footer-heading">EXPLORE</p>
+                <ul class="footer-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">My Education</a></li>
+                    <li><a href="#portfolio">WIP Portfolio</a></li>
+                    <li><a href="#contact">Get in Touch</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                Made with ♡ by Aaliyah Aya-ay
+            </p>
+            <p class="footer-small">© 2026 | All Rights Reserved.</p>
+            <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
