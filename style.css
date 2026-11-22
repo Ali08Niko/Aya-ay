@@ -375,40 +375,64 @@ button:hover {
 
 .flag-decoration {
     position: absolute;
-    top: -55px;
-    right: -30px;
-
-    color: var(--accent-light);
-    font-size: 85px;
-
-    z-index: 3;
-    text-shadow: 0 0 20px var(--gold-glow);
+    width: 75px;
+    height: auto;
+    top: -0.05px;
+    left: 90%;
+    transform: translateX(-50%) rotate(8deg);
+    z-index: 5;
 }
 
 .letter-decoration {
-    position: absolute;
-    color: var(--accent-light);
-    z-index: 3;
-    text-shadow: 0 0 12px var(--accent-light);
+    transition: transform 0.3s ease;
+}
+
+.flag-decoration:hover {
+    transform: rotate(18deg) scale(1.1);
 }
 
 .letter-a {
+    position: absolute;
+    width: 60px;
+    height: auto;
     top: 15%;
-    left: -45px;
-    font-size: 35px;
+    left: -35px;
+    z-index: 5;
+    transform: rotate(-12deg);
+}
+
+.letter-a:hover {
+    transform: rotate(-22deg) scale(1.1);
 }
 
 .letter-l {
-    top: 55%;
-    right: -45px;
-    font-size: 30px;
+    position: absolute;
+    width: 60px;
+    height: auto;
+    top: 40%;
+    right: -35px;
+    z-index: 5;
+    transform: rotate(12deg);
+}
+
+.letter-l:hover {
+    transform: rotate(20deg) scale(1.1);
 }
 
 .letter-i {
-    bottom: 5%;
-    left: -35px;
-    font-size: 22px;
+    position: absolute;
+    width: 60px;
+    height: auto;
+    bottom: 12%;
+    left: -30px;
+    z-index: 5;
+    transform: rotate(-10deg);
 }
+
+.letter-i:hover {
+    transform: rotate(-18deg) scale(1.1);
+}
+
 .hero-image .hero-sticker {
     position: absolute;
     width: 115px;
@@ -477,17 +501,25 @@ button:hover {
         height: 350px;
     }
 
-    .moon-decoration {
+    .flag-decoration {
+        width: 75px;
+        top: -30px;
         right: -15px;
-        font-size: 65px;
     }
 
-    .star-one {
+    .letter-a {
+        width: 45px;
+        left: -25px;
+    }
+
+    .letter-l {
+        width: 45px;
+        right: -25px;
+    }
+
+    .letter-i {
+        width: 38px;
         left: -20px;
-    }
-
-    .star-two {
-        right: -20px;
     }
 
     .hero-image .hero-sticker {
