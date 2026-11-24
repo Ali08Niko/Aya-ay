@@ -203,15 +203,139 @@ button:hover {
     }
 }
 
+.music-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 250px;
+    padding: 13px 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(169, 139, 196, 0.12),
+            transparent 70%
+        ),
+        #1B1421;
+
+    border: 1px solid rgba(198, 161, 91, 0.6);
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.25),
+        inset 0 0 15px rgba(169, 139, 196, 0.05);
+
+    transition: 0.3s ease;
+}
+
+.music-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 18px rgba(169, 139, 196, 0.18);
+}
+
+.music-card-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    background: rgba(169, 139, 196, 0.15);
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+
+    color: var(--accent-light);
+    font-size: 20px;
+}
+
+.music-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.music-label {
+    color: var(--accent-light);
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.music-status {
+    color: var(--main-text);
+    font-family: Georgia, serif;
+    font-size: 11px;
+}
+
+.music-star {
+    margin-left: auto;
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.music-player {
+    width: 100%;
+    height: 35px;
+
+    color-scheme: dark;
+    accent-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+
+    .music-card {
+        width: min(280px, 100%);
+        box-sizing: border-box;
+    }
+
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 4%;
+}
+
+.nav-links {
+    gap: clamp(15px, 2vw, 30px);
+}
+
+@media (max-width: 768px) {
+
+    .top-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .music-card {
+        margin-top: 5px;
+    }
+}
+
 /*MAIN PAGE*/
 .hero {
     min-height: 620px;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
     align-items: center;
-    gap: 60px;
+    justify-content: center;
+    gap: clamp(35px, 5vw, 75px);
 
-    padding: 90px 10%;
+    padding: 70px clamp(35px, 8vw, 120px);
     background: radial-gradient(circle at top right, rgba(117, 69, 166, 0.2), transparent 45%),
     radial-gradient(circle at 10% 90%, rgba(198, 161, 91, 0.08), transparent 30%),
     var(--main-bg);
@@ -223,6 +347,8 @@ button:hover {
 .hero-content {
     position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 650px;
 }
 .eyebrow {
     display: inline-block;
@@ -250,11 +376,11 @@ button:hover {
 
 .hero h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: clamp(48px, 6vw, 82px);
+    font-size: clamp(42px, 5vw, 72px);
     line-height: 1.05;
     letter-spacing: 1px;
     color: var(--main-text);
-
+    overflow-wrap: break-word;
     margin: 0 0 25px;
 }
 
@@ -264,7 +390,7 @@ button:hover {
 }
 
 .hero-copy {
-    max-width: 520px;
+    max-width: 500px;
     font-family: Georgia, serif;
     font-size: 17px;
     line-height: 1.9;
@@ -279,6 +405,7 @@ button:hover {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: flex-start;
+    margin-top: 25px;
 }
 .hero-actions .primary,
 .hero-actions .secondary {
@@ -357,14 +484,16 @@ button:hover {
 .hero-image {
     position: relative;
     justify-self: center;
-    width: 120%;
+    width: 100%;
     max-width: 390px;
     margin: 0;
+    align-self: center;
 }
 
 .portrait-frame {
     position: relative;
     padding: 12px;
+    width: 100%;
 
     background: linear-gradient(
         145deg,
@@ -374,6 +503,7 @@ button:hover {
     );
     border-radius: 250px 250px 50px 50px;
     box-shadow: 0 0 35px var(--gold-glow);
+    box-sizing: border-box;
 
     transform: rotate(2deg);
     transition: 0.4s ease;
@@ -484,7 +614,7 @@ button:hover {
 
 .portrait-caption {
     text-align: center;
-    margin-top: 28px;
+    margin-top: 25px;
 
     color: var(--accent-light);
     font-family: Georgia, serif;
@@ -493,13 +623,17 @@ button:hover {
     letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) and (max-width: 1100px) {
     .hero {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
         text-align: center;
-        padding: 65px 25px;
-        gap: 65px;
+        padding: 65px 5%;
+        gap: 30px;
     }
+
+    .hero h1 {
+        font-size: clamp(38px, 4.5vw, 55px);
+    } 
 
     .hero-copy {
         margin-left: auto;
@@ -516,11 +650,11 @@ button:hover {
     }
 
     .hero-image {
-        max-width: 290px;
+        max-width: 330px;
     }
 
     .hero-image .hero-photo {
-        height: 350px;
+        height: 390px;
     }
 
     .flag-decoration {
@@ -530,17 +664,17 @@ button:hover {
     }
 
     .letter-a {
-        width: 45px;
+        width: 65px;
         left: -25px;
     }
 
     .letter-l {
-        width: 45px;
+        width: 65px;
         right: -25px;
     }
 
     .letter-i {
-        width: 38px;
+        width: 65px;
         left: -20px;
     }
 
@@ -551,6 +685,41 @@ button:hover {
     }
 }
 
+@media (max-width: 768px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 65px 25px;
+        gap: 55px;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-copy {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-footer-note {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 85%;
+        max-width: 290px;
+    }
+
+    .hero-image .hero-photo {
+        height: 350px;
+    }
+}
 
 /* SURPRISE BUTTON
 .surprise-bubble {
@@ -2438,4 +2607,25 @@ button:hover,
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0 0 18px var(--glow);
+}
+
+.fav-gallery {
+    display: none;
+}
+
+.fav-album-check:checked ~ .fav-gallery {
+    display: block;
+    animation: albumOpen 0.4s ease;
+}
+
+.when-open {
+    display: none;
+}
+
+.fav-album-check:checked ~ .fav-album-entry .when-closed {
+    display: none;
+}
+
+.fav-album-check:checked ~ .fav-album-entry .when-open {
+    display: inline;
 }
