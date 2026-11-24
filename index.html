@@ -7,13 +7,11 @@
     <meta name="description" content="Personal website about me, my favorite things and many more soon!">
     <title>Aaliyah Aya-ay | BSIS Freshman</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body id="top">
 <!-- ======= Header / Navigation ======= -->
     <header class="top-header">
         <a class="header" href="#home"><span>Ali's</span> Little Corner✦</a>
-        <a href="#top" id="home">↑</a>
         <nav class="navbar">
             <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -22,10 +20,15 @@
             <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <button class="music-btn" id="musicButton" type="Button">♫ Play a tune</button>
-        <audio id="backgroundMusic" loop preload="auto">
+
+        <audio class="music-player" controls loop preload="metadata" aria-label="Background music">
             <source src="./audio/background-music.mp3" type="audio/mpeg">
         </audio>
+
+        <!-- <button class="music-btn" id="musicButton" type="Button">♫ Play a tune</button>
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="./audio/background-music.mp3" type="audio/mpeg">
+        </audio> -->
     </header>
 
     <main>
@@ -44,12 +47,14 @@
                     dreams, and My Journey Through Life.
                 </p>
 
+
+
                 <div class="hero-actions">
                     <a class="primary" href="#about">
                         GET TO KNOW ME ↗
                     </a>
 
-                    <button class="secondary" id="surpriseButton" type="button">
+                    <!-- <button class="secondary" id="surpriseButton" type="button">
                         MY FAVE QUOTES ✦
                     </button>
                 </div>
@@ -57,7 +62,7 @@
                 <div class="surprise-bubble" id="surpriseBubble">
                     <span class="bubble-icon">✦</span>
                     <p id="surpriseText">A little message for you!</p>
-                </div>
+                </div> -->
 
                 <div class="hero-footer-note">
                     <span>☽</span>
@@ -120,6 +125,9 @@
             </div>
 
             <!-- ========== FAV SECTION ========== -->
+
+            <input class="fav-album-check" type="checkbox" id="albumCheck">
+
             <div class="fav-album-entry">
                 <div class="album-decoration">✧ ☾ ✧</div>
                 <p class="album-kicker">A COLLECTION OF LITTLE TREASURES</p>
@@ -128,6 +136,85 @@
                     A few things that hold a special place in my heart.
                 </p>
 
+                <label class="album-toggle" for="albumCheck">
+                    <span class="when-closed">
+                        ♡ Open My Favorites Album
+                    </span>
+                    <span class="when-open">
+                        ♡ Close My Favorites Album
+                    </span>
+                </label>
+                <p class="album-hint">A little collection of my favorite things.</p>
+            </div>
+
+            <div class="fav-gallery" id="favGallery">
+                <div class="gallery-heading">
+                    <span class="gallery-kicker">☽ A COLLECTION OF FAVORITES ☾</span>
+                    <h3>Little Things I Adore ♡</h3>
+                    <p>Every picture holds a little piece of my heart.</p>
+                </div>
+            </div>
+
+            <div class="gallery-grid">
+                    <figure class="gallery-photo" id="photo-musical">
+                        <a class="gallery-link" href="#lightbox-musical" aria-label="View My Favorite Musical larger">
+                            <img src="./images/fav_musical.jpg" alt="My Favorite Musical">
+                        </a>
+                        <figcaption>Best Musical Ever ♡</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo" id="photo-series">
+                        <a class="gallery-link" href="#lightbox-series" aria-label="View Best Series larger">
+                            <img src="./images/fav_series.jpg" alt="Best Series">
+                        </a>
+                        <figcaption>24/7 Rewatch</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo" id="photo-anime">
+                        <a class="gallery-link" href="#lightbox-anime" aria-label="View Best Anime larger">
+                            <img src="./images/fav_anime.jpg" alt="Best Anime">
+                        </a>
+                        <figcaption>FairyTails do exsits</figcaption>
+                    </figure>
+
+                    <figure class="gallery-photo" id="photo-dog">
+                        <a class="gallery-link" href="#lightbox-dog" aria-label="View Best Dog Ever larger">
+                            <img src="./images/best_dog.jpg" alt="Best Dog Ever">
+                        </a>
+                        <figcaption>Best Dog Ever</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="lightbox" id="lightbox-musical">
+                <a class="lightbox-backdrop" href="#photo-musical" aria-label="Close image"></a>
+                <a class="lightbox-close" href="#photo-musical" aria-label="Close image">&times;</a>
+                <img src="./images/fav_musical.jpg" alt="My Favorite Musical">
+                <p>Best Musical Ever ♡</p>
+            </div>
+
+            <div class="lightbox" id="lightbox-series">
+                <a class="lightbox-backdrop" href="#photo-series" aria-label="Close image"></a>
+                <a class="lightbox-close" href="#photo-series" aria-label="Close image">&times;</a>
+                <img src="./images/fav_series.jpg" alt="Best Series">
+                <p>24/7 Rewatch</p>
+            </div>
+
+            <div class="lightbox" id="lightbox-anime">
+                <a class="lightbox-backdrop" href="#photo-anime" aria-label="Close image"></a>
+                <a class="lightbox-close" href="#photo-anime" aria-label="Close image">&times;</a>
+                <img src="./images/fav_anime.jpg" alt="Best Anime">
+                <p>FairyTails do exsits</p>
+            </div>
+
+            <div class="lightbox" id="lightbox-dog">
+                <a class="lightbox-backdrop" href="#photo-dog" aria-label="Close image"></a>
+                <a class="lightbox-close" href="#photo-dog" aria-label="Close image">&times;</a>
+                <img src="./images/best_dog.jpg" alt="Best Dog Ever">
+                <p>Best Dog Ever</p>
+            </div>
+         </section>
+            <!--
                 <button class="album-toggle" id="albumToggle" type="button"
                     aria-expanded="false" aria-controls="favGallery">
                     ♡ Open the Book
@@ -172,7 +259,7 @@
                 <img id="lightboxImage" src="" alt="">
                 <p id="lightboxCaption"></p>
             </div>
-         </section>
+         </section> -->
 
          <!-- ========== EDUCATION ========== -->
          <section class="section" id="education">
