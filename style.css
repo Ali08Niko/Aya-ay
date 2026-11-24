@@ -329,11 +329,13 @@ button:hover {
     font-size: 20px;
 }
 
+
+
 /*IMAGE*/
 .hero-image {
     position: relative;
     justify-self: center;
-    width: 100%;
+    width: 120%;
     max-width: 390px;
     margin: 0;
 }
@@ -348,7 +350,7 @@ button:hover {
         var(--dark-amethyst),
         var(--accent-light)
     );
-    border-radius: 190px 190px 15px 15px;
+    border-radius: 250px 250px 50px 50px;
     box-shadow: 0 0 35px var(--gold-glow);
 
     transform: rotate(2deg);
@@ -1074,7 +1076,7 @@ button:hover {
 }
 
 .timeline-symbol {
-    position: absolute;
+    position: relative;
     left: -65px;
     top: 25px;
     width: 42px;
@@ -2090,4 +2092,17 @@ button:hover,
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--witch-green);
+    color: var(--main-text);
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 18px var(--glow);
 }
